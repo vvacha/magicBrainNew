@@ -1,0 +1,181 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Курсы</title>
+  <!-- Bootstrap -->
+  <link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
+  <link href="{% static "css/bootstrapp.css" %}" rel="stylesheet">
+  <link href="{% static "css/media.css" %}" rel="stylesheet">
+ 
+   <style>
+  body {
+  padding-top: 70px;
+*  padding-bottom: 30px;*/
+}
+
+*.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}*/
+  </style>
+</head>
+  <body>
+  <div role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+            <span class="sr-only">Magic Brain</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+           <a href="/admin/" class="navbar-brand">Magic Brain</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/lessons/">Уроки</a></li>
+            <li><a href="/articles/get/{{ article.id }}1/">Контакты</a></li>
+          </ul>
+         {% if username %}
+         <form class="navbar-form"  action="/auth/logout/" method="post"> 
+         {% csrf_token %} 
+            <form role="form" class="navbar-form navbar" action="/auth/login/" method="post"> 
+              <input type="text" placeholder="Поиск..." class="form-control">
+              <button class="btn btn-success" type="submit">Выйти</button>
+              <div class="form-group">
+                <!-- <h6 >({{ username }})</h6> -->
+              </div>
+              <a href="/userpage/"><b>{{ username }} {{ id }}</b></a>
+            </form>
+         </form> 
+                                   
+                                  {% else %}
+                                    <form class="navbar-form" action="/auth/login/" method="post"> 
+                                    {% csrf_token %}
+                                        <input type="text" placeholder="Поиск..." class="form-control">
+
+                                        <ul class="nav navbar-nav navbar-right">
+                                         <li>
+                                         <p class="navbar-text">Already have an account?</p>
+                                         </li>
+                                         <li class="dropdown">
+
+                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+
+                                         <ul id="login-dp" class="dropdown-menu">
+                                         <li>
+                                         <div class="row">
+                                         <div class="col-md-12">
+                                        <!--  Login via
+                                         <div class="social-buttons">
+                                         <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+                                         <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
+                                         </div>
+                                         or
+ -->
+                                      <!--    <br>
+                                         <br> -->
+                                        
+                                          <form class="form" role="form" action="/auth/login/" method="post">
+                                           
+                                 
+                                        <div class="form-group">
+                                            <label class="sr-only" >Email address</label>
+                                            <input type="text" class="form-control" name="username" id="username" placeholder="Email" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="sr-only">Password</label>
+                                            <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
+                                            <div class="help-block text-right"><a href="">Forget the password ?</a></div>
+                                        </div>
+                                        <div class="form-group">
+
+                                            <button type="submit" class="btn btn-primary btn-block">Войти</button>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                
+                                                <input type="checkbox"> keep me logged-in
+                                            </label>
+                                        </div>
+                                    </form>
+                                    {% if login_error %}
+                                    <h6 >{{ login_error }}</h6>
+                                    {% endif %}
+                                </div>
+                                <div class="bottom text-center">
+                                 <!-- <button class="btn btn-success" href="/auth/register/" type="submit">Зарегистрироваться</button> -->
+                                  <a href="/auth/register/"><b>Зарагистрироваться</b></a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+          </form>
+
+       {% endif %}
+  </div>
+  </form>
+  </div>
+  </div>
+  <div class="jumbotron">
+    <div class="container">
+
+    <!-- <form action="/your-name/" method="post">
+      {% csrf_token %}
+       {{ form }} 
+      {{ form.as_table }}
+       {{ form.as_p }} 
+      {{ form.}}
+      {{ form.as_ul }}
+      <input type="submit" value="Submit" />
+    </form>
+ -->
+      {% block usersetting %}{% endblock %}
+      {% block userpage %}{% endblock %}
+      {% block lessons %}{% endblock %}
+      {% block lesson %}{% endblock %}
+      {% block login %}{% endblock %}
+      {% block forma %}{% endblock %}
+
+
+<!-- 
+      <p><label for="id_subject">Subject:</label>
+    <input id="id_subject" style="margin-left: 30px" type="text" name="subject" maxlength="100" /></p>
+<p><label for="id_message">Message:</label>
+    <input type="text" name="message" id="id_message" /></p>
+<p><label for="id_sender">Sender:</label>
+    <input type="email" name="sender" id="id_sender" /></p>
+<p><label for="id_cc_myself">Cc myself:</label>
+    <input type="checkbox" name="cc_myself" id="id_cc_myself" /></p>
+
+       -->
+<!-- 
+      <label for="your_name">Your name: </label>
+      <input id="your_name" type="text" name="your_name" maxlength="100">
+ -->
+      <!-- <p><a role="button" class="btn btn-primary btn-lg">Learn more »</a></p> -->
+    </div>
+  </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="{% static "js/jquery-1.11.1.min.js" %}" type="text/javascript"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+    <script src="{% static "js/jquery.form.js" %}" type="text/javascript"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{% static "js/bootstrap.js" %}" type="text/javascript"></script>
+    <script src="{% static "js/project.js" %}" type="text/javascript"></script>
+    <script src="{% static "js/jquery.montage.min.js" %}" type="text/javascript"></script>
+
+  </body>
+</html>

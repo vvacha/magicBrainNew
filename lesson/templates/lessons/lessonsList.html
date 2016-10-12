@@ -1,0 +1,12 @@
+{% extends 'home/main.html' %}
+{% block lessons %}
+
+      <h1>Уроки</h1>
+      
+      {% for lesson in lesson_lists %}
+        <h4><a href="/lessons/{{ lesson.id }}">{{ lesson.lesson_name }}</a></h4>
+        <p>{{lesson.lesson_creator}}</p>
+      {% endfor %}
+
+{% endblock %}
+    

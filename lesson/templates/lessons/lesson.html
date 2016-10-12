@@ -1,0 +1,26 @@
+{% extends 'home/main.html' %}
+{% load staticfiles %}
+<style>
+ #id_comments_text{
+  padding-right:  50px;
+ }
+</style>
+{% block lesson %}
+<div>
+
+<h2><a href="/lessons/{{ lesson.id }}">{{ lesson.lesson_name }}</a></h2>
+<img  src="{% static  lesson.lesson_image.url %}">
+{{ lesson.lesson_text }}
+
+
+<!-- <p>Коменнтарии</p>
+{% for comment in comments %}
+ <p> {{ comment.comments_text }}</p>
+{% endfor %}
+<form  action ="/articles/addcoment/{{ article.id }}">
+{% csrf_token %}
+{{ form }}
+<button type="submit" class="btn btn-primary">Отправить</button>
+</form> -->
+</div>
+{% endblock %}

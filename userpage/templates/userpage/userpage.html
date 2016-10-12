@@ -1,0 +1,23 @@
+{% extends 'home/main.html' %}
+{% load staticfiles %}
+{% block userpage %}
+
+<div class="avatar_cabinet" style="background-image:url('{% static user.customuser.avatar %}'); width:147px; height:147px; float:left ; background-position: center; background-size: cover;"></div>
+
+<br>
+<h5 >___nik name ---  {{userdata.username}} </h5>
+<h5 >___Имя  ---  {{userdata.first_name}} </h5>
+<h5 >___Фамилия ---  {{userdata.last_name}} </h5>
+<h5 >___Город ---  {{userdata.customuser.city}} </h5>
+<h5 >___id ---  {{userdata.id}} </h5>
+<br>
+
+{{userdata.as_p}}
+{{userdata.date_joined}}
+{{userdata.email}}
+
+<form action="{% url 'user_update' userdata.id %}">
+	<button  class="btn-success" type="submit">Редактировать профиль</button>
+</form>
+
+{% endblock %}

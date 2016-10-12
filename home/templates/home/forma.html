@@ -1,0 +1,50 @@
+{% extends "home/main.html" %}
+
+{% block forma %}
+<form action="/your-name/" method="post">
+{% csrf_token %}
+		
+	{% for field in form %}
+    <div class="fieldWrapper">
+    <!-- {{ field.html_name }} -->
+        {{ field.errors }}
+        <!-- {{ field.label }}
+        {{ field.id_for_label }}
+        {{ field.value }} -->
+        {{ field.label_tag }} {{ field }}
+       <!--  {% if field.help_text %}
+        <div style="margin-left: 50px">
+        <h3 style="margin-left: 300px" class="help">{{ field.help_text|safe }}</h3>
+        </div>
+        {% endif %} -->
+    </div>
+{% endfor %}
+
+      <!-- {{ form.non_field_errors }} -->
+<!-- <div class="fieldWrapper">
+    {{ form.subject.errors }}
+    <label for="{{ form.subject.id_for_label }}">Email subject:</label>
+    {{ form.subject }}
+</div>
+<div class="fieldWrapper">
+    {{ form.message.errors }}
+    <label for="{{ form.message.id_for_label }}">Your message:</label>
+    {{ form.message }}
+</div>
+<div class="fieldWrapper">
+    {{ form.sender.errors }}
+    <label for="{{ form.sender.id_for_label }}">Your email address:</label>
+    {{ form.sender }}
+</div>
+<div class="fieldWrapper">
+    {{ form.cc_myself.errors }}
+    <label for="{{ form.cc_myself.id_for_label }}">CC yourself?</label>
+    {{ form.subject.label_tag }}
+    {{ form.cc_myself }}
+    <input type="submit" value="Submit"/>
+
+
+ -->
+ <input type="submit" value="Submit"/>
+</form>
+{% endblock %}

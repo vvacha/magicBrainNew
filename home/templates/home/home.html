@@ -1,0 +1,208 @@
+{% extends 'home/main.html' %}
+{% block droch %}
+
+    
+    <div class="jumbotron text-center header-jumbotron">
+        <div class="container">
+          <h1>Учись чему угодно!</h1>
+          <p>Платформа для создания и прохождения курсов</p>
+          <p class="m-b-0"><a class="btn btn-default btn-lg" href="#" role="button" data-toggle="modal" data-target="#regModal"><strong>Учиться!</strong></a>
+          </p>
+          <small><strong>Это бесплатно</strong></small>
+        </div>
+      </div>
+    </header>
+
+    <section class="section-one" id="students" name="students">
+      <div class="container text-center">
+
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>О чем наш сервис?</h2>
+                <hr>
+                <p>Тут можно научиться чему-то новому или создать свой собственный курс.</p>
+                <p>Мы стремимся сделать обучение простым и интересным. Учись или создай свой собственный курс.</p>
+            </div>
+        </div>
+
+        <div class="row image-section">
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <img src="images/image6.jpg" alt="..." class="img-thumbnail">
+              <div class="caption">
+                <h3><i class="fa fa-graduation-cap" aria-hidden="true"></i> Уроки</h3>
+                <hr>
+                <p>Проходи интерактивные уроки или создавай свои и учи других</p>
+              </div>
+            </div>
+            <!-- <img src="images/header.jpg" alt="..." class="img-circle" width="200px" height="200px">
+              <h3><i class="fa fa-graduation-cap" aria-hidden="true"></i> Заголовок</h3>
+            <hr>
+            <p>Идейные соображения высшего порядка, а также сложившаяся структура организации играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям.</p> -->
+          </div>
+
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <img src="images/image7.jpg" alt="..." class="img-thumbnail">
+              <div class="caption">
+                <h3><i class="fa fa-pencil" aria-hidden="true"></i> Упражнения</h3>
+                <hr>
+                <p>Выполняй упражнения для закрепления полученых знаний</p>
+              </div>
+            </div>
+            <!-- <img src="images/header.jpg" alt="..." class="img-circle" width="200px" height="200px">
+            <h3><i class="fa fa-pencil" aria-hidden="true"></i> Заголовок</h3>
+            <hr>
+            <p>Идейные соображения высшего порядка, а также сложившаяся структура организации играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям.</p> -->
+          </div>
+
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <img src="images/suit.jpeg" alt="..." class="img-thumbnail">
+              <div class="caption">
+                <h3><i class="fa fa-trophy" aria-hidden="true"></i> Сертификаты</h3>
+                <hr>
+                <p>Получи новые навыки и сертификат подтверждающие их</p>
+              </div>
+            </div>
+            <!-- <img src="images/header.jpg" alt="..." class="img-circle" width="200px" height="200px">
+            <h3><i class="fa fa-trophy" aria-hidden="true"></i> Заголовок</h3>
+            <hr>
+            <p>Идейные соображения высшего порядка, а также сложившаяся структура организации играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям.</p> -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section-two" id="employers" name="employers">
+      <div class="jumbotron section-two-jumbotron m-b-0">
+        <div class="container">
+          <h1>Работодателям</h1>
+          <p>Вы можете создать и опубликовать свои курсы с упражнениями</p>
+          <p class="m-b-0"><a class="btn btn-default btn-lg" href="#" role="button" data-toggle="modal" data-target="#regModal"><strong>Преподавать!</strong></a>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <footer>
+      <div class="container">
+        <p>
+
+        </p>
+      </div>
+    </footer>
+
+   
+    <!-- Форма входа -->
+
+   <!--  <div class="modal fade" id="logModal" tabindex="-1" role="dialog" aria-labelledby="logModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Вход</h4>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Почта</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Электронная почта">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Пароль</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Пароль">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+            <button type="submit" class="btn btn-default">Войти</button>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!--Форма регистрации-->
+    <div class="modal fade" id="regModal" tabindex="-1" role="dialog" aria-labelledby="regModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Регистрация</h4>
+          </div>
+          <div class="modal-body">
+            <form  action="" method="post">
+             {% csrf_token %}
+            <!-- <form> -->
+              <div class="form-group">
+                <label for="exampleInputName">Имя</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Имя">
+              </div>
+  
+              <div class="form-group">
+                <label for="exampleInputCity">Город</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Город">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Почта</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Электронная Почта">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Пароль</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Пароль">
+              </div>
+              <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Ученик
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Преподаватель
+              </label>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+            <button type="submit" class="btn btn-default">Регистрация</button>
+          </div>
+        </div>
+      </div>
+    </div>
+            </form>
+
+    <!--Форма обратной связи-->
+    <div class="modal fade" id="sendModal" tabindex="-1" role="dialog" aria-labelledby="sendModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Обратная связь</h4>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Почта</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Ваша почта">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Сообщение</label>
+                <textarea class="form-control" rows="3" placeholder="Введите ваше сообщение"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+            <button type="submit" class="btn btn-default">Отправить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+{% endblock %}
+    

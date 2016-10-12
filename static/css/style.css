@@ -1,0 +1,102 @@
+.navbar-brand strong {
+  font-family: 'Nunito';
+}
+
+.m-b-0 {
+  margin-bottom: 0 !important;
+}
+
+.p-b-0 {
+  padding-bottom: 0 !important;
+}
+
+.m-t-0 {
+  margin-top: 0 !important;
+}
+
+.p-t-0 {
+  padding-top: 0 !important;
+}
+
+.bar-color a{
+  color: #20c570 !important;
+}
+
+.bar-color a:hover{
+  color: #50e5a0 !important;
+}
+
+.navbar{
+  background: white;
+  border-top: 10px solid #50e5a0;
+  border-radius: 0px;
+}
+
+.jumbotron .container{
+  padding-top: 100px;
+  color: white;
+}
+
+.modal-content{
+  background: white;
+
+}
+
+.modal-content .btn{
+  color: #20c570;
+  border: 1px solid #20c570;
+}
+
+.modal-content .btn:hover{
+  color: #50e5a0;
+  border: 1px solid #50e5a0;
+}
+
+footer{
+  background: #50e5a0;
+  color: white;
+  font-size: 12px;
+}
+
+.header-jumbotron{
+    position: relative;
+    background: url('../images/background.jpg');
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    border-bottom: 10px solid #50e5a0;
+    border-radius: 0px;
+}
+
+.section-two-jumbotron{
+    position: relative;
+    background: url('../images/image3.jpg');
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    border-bottom: none;
+}
+
+.image-section{
+  padding: 50px 0px;
+}
+
+.btn{
+  border: 1px solid white;
+  color: white;
+  background: none;
+}
+
+.btn:hover{
+  border: 1px solid white;
+  color: #20c570;
+  background: white;
+}
+
+.btn-default {
+  color: white;
+}
