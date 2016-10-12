@@ -115,7 +115,7 @@ STATICFILES_DIRS = (
 # STATIC_DOC_ROOT = '/home/vvacha/test_python/myvenv/test_Form/myFakingSite/static'
 
 MEDIA_URL = "/media/"
-MEDIA_ROOT = '/home/vvacha/test_python/myvenv/MagikBrain/git/MagicBrain/media/'
+MEDIA_ROOT = BASE_DIR + '/media/'
 # MEDIA_ROOT = 'C:/Python3/XXX/newTemplate_test666/MagicBrain/media/'
 
 # MEDIA_ROOT2 = 'static/media/'
